@@ -1,0 +1,36 @@
+import java.util.*;
+public class Watermelon {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int weight=sc.nextInt();
+        int parts=weight%2;
+        if(weight==2){
+            System.out.print("NO");
+        }
+        else if(parts==0){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("NO");
+        }
+    }
+}
+//C code
+#include <stdio.h>
+int main()
+{
+    int weight,parts;
+    scanf("%d",&weight);
+    parts=weight%2;
+    if(weight==2){
+        printf("No");
+    }
+    else if (parts==0){
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+    return 0;
+ 
+}

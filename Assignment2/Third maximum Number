@@ -1,0 +1,28 @@
+class Solution {
+    public int thirdMax(int[] nums) {
+         Integer max=null;
+        Integer Second_max=null;
+        Integer Third_max=null;
+        for(Integer num:nums){
+        if(num.equals(max) || num.equals(Second_max) || num.equals(Third_max)){
+            continue;
+        }
+            if(max==null || num>max){
+                Third_max=Second_max;
+                Second_max=max;
+                max=num;
+            }
+            else if(Second_max==null || num>Second_max){
+                Third_max=Second_max;
+                Second_max=num;
+            }
+            else if(Third_max==null || num>Third_max){
+                Third_max=num;
+            }
+        }
+            if(Third_max==null){
+                return max;
+            }
+        return Third_max;
+}
+    }
